@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function jim_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['jim_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['jim_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+
+use \Drupal\block_content\BlockContentInterface;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function jim_barrio_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content']) && $variables['elements']['content']['#block_content'] instanceof BlockContentInterface) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

@@ -1,0 +1,141 @@
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+    background: $white;
+}
+
+/* View mode teaser styles. */
+
+.node--view-mode-teaser {
+    border-bottom: $border-width solid $border-color;
+    margin-bottom: $spacer;
+    padding-bottom: $spacer;
+}
+
+.node--view-mode-teaser h2 {
+    margin-top: 0;
+    padding-top: 0.5em;
+	color: $headings-color;
+}
+
+.node--view-mode-teaser.node--sticky {
+    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.024);
+    border: $border-width solid $border-color;
+    padding: 0 $spacer $spacer;
+}
+
+.node--view-mode-teaser .node__content {
+    clear: none;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+
+
+/* COLORS 
+--------------------------------------------------*/
+
+a {
+    color: $primary;
+}
+
+.bg-inverse {
+    background: $primary-shade !important;
+}
+
+
+.menu--main li a {
+    color: $primary;	
+}
+
+.menu--account li a {
+    color: $primary-shade;
+}
+
+.site-name-slogan a {
+    text-decoration: none;
+}
+
+.card-group img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card-group .field--type-image {
+    margin: 0
+}
+
+.slick {
+    width: 100%;
+}
+
+.slick>div {
+    margin: 0 15px;
+}
+
+.custom-text-align {
+	display: flex;
+	align-items: end;
+}
+
+.contact-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.adresblock {
+	color: $white;
+	display: flex;
+}
+
+// Regions
+
+#block-jim-barrio-branding {
+	border: solid $primary;
+}
+
+.featured-top {
+	background-image: url('../images/jim-werkt.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	height: 70vh;
+}
+
+.header {
+	font-size: $font-size-lg;
+	text-align: center;
+	font-weight: $font-weight-bold;
+}
+
+.featured-bottom {
+	background: url('../images/background-locaties.jpg');
+	background-size: cover;
+}
+
+.site-footer {
+    background: $gray-800 !important;
+}
+
+.region-footer-second {
+	justify-content: flex-end;
+	color: $white;
+}
+
+.region-footer-third {
+	justify-content: center;
+}

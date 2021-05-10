@@ -1,0 +1,35 @@
+jim_barrio.extrasmall:
+  label: xs
+  mediaQuery: 'all and (max-width: 575px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 1.5x
+jim_barrio.small:
+  label: sm
+  mediaQuery: 'all and (min-width: 576px) and (max-width: 767px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 1.5x
+jim_barrio.medium:
+  label: md
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 991px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 1.5x
+jim_barrio.large:
+  label: lg
+  mediaQuery: 'all and (min-width: 992px) and (max-width: 1199px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 1.5x
+jim_barrio.extra:
+  label: xl
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 1.5x
