@@ -43,6 +43,7 @@
         "drupal/jquery_ui_checkboxradio": "^1.2",
         "drupal/pathauto": "^1.8",
         "drupal/redirect": "^1.6",
+        "drupal/shield": "^1.4",
         "drupal/taxonomy_menu_ui": "^1.4",
         "drupal/views_bootstrap": "^4.3",
         "drupal/webform": "6.0.3",
